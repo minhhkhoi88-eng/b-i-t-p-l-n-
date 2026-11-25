@@ -1,0 +1,44 @@
+/* Thiết lập chung */
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Arial, sans-serif; background: #10141a; color: #f4f4f4; line-height: 1.7; }
+header { background: #090c10; padding: 18px 6%; display: flex; justify-content: space-between; align-items: center; gap: 18px; flex-wrap: wrap; }
+.logo { font-size: 22px; font-weight: bold; color: white; }
+.logo span { color: #e9ad49; }
+nav { display: flex; gap: 20px; flex-wrap: wrap; }
+nav a { color: #fff; text-decoration: none; font-weight: bold; }
+nav a:hover { color: #e9ad49; }
+/* Ảnh trang chủ */
+.hero { min-height: 560px; background: linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.7)), url('images/mat-tien.png') center/cover; display: flex; align-items: center; justify-content: center; text-align: center; padding: 40px 20px; }
+.hero h1 { font-size: clamp(34px, 6vw, 64px); margin: 0; color: #fff; }
+.hero p { font-size: 20px; }
+.btn { display: inline-block; margin-top: 15px; background: #e9ad49; color: #171717; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: bold; }
+.btn:hover { background: #ffca73; }
+/* Các phần nội dung */
+.section { padding: 75px 8%; }
+h2 { text-align: center; color: #e9ad49; font-size: 32px; margin-top: 0; }
+.tinted { background: #1a2029; }
+.about { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 40px; }
+.about h2 { text-align: left; }
+.about img { width: 100%; border-radius: 12px; }
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 35px; }
+.card { background: #252d37; padding: 30px 22px; border-radius: 12px; text-align: center; }
+.card h3 { color: #e9ad49; }
+.emoji { font-size: 42px; }
+.center { text-align: center; }
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; margin-top: 30px; }
+.gallery figure { margin: 0; background: #252d37; border-radius: 10px; overflow: hidden; }
+.gallery img { width: 100%; height: 220px; object-fit: cover; display: block; }
+.gallery figcaption { padding: 12px; text-align: center; }
+.contact { text-align: center; }
+footer { background: #080a0d; text-align: center; padding: 20px; color: #aaa; }
+/* Hiển thị trên điện thoại */
+@media (max-width: 768px) {
+  header { justify-content: center; text-align: center; }
+  nav { justify-content: center; gap: 12px; }
+  .hero { min-height: 430px; }
+  .about, .cards { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .section { padding: 55px 6%; }
+}
+@media (max-width: 480px) { .gallery { grid-template-columns: 1fr; } }
